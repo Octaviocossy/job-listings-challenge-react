@@ -1,0 +1,22 @@
+@import './vars';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $LightCyanBg;
+}
+
+code {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.main--header__img {
+  background-color: $desaturateDarkCyan;
+  width: 100%;
+}

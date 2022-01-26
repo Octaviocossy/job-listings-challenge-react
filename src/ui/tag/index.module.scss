@@ -1,0 +1,19 @@
+@import '../../vars';
+
+.div {
+  background-color: $LightCyantags;
+  padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  &:hover {
+    background-color: $desaturateDarkCyan;
+    p {
+      color: $LightCyanBg;
+    }
+  }
+  &--p {
+    font-size: 13px;
+    font-weight: 700;
+    color: $desaturateDarkCyan;
+  }
+}

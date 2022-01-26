@@ -1,0 +1,24 @@
+// Colors
+// Primary
+$desaturateDarkCyan: hsl(180, 29%, 50%);
+
+// Neutral
+$LightCyanBg: #eaf9fa;
+$LightCyantags: #edf1f1;
+$LightCyanFilter: #fafafa;
+$DarkCyan: hsl(180, 8%, 52%);
+$VeryDarkCyan: hsl(180, 14%, 20%);
+
+// Media query
+
+@mixin mobile {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin desk {
+  @media screen and (max-width: 1440px) {
+    @content;
+  }
+}
