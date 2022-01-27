@@ -1,16 +1,45 @@
 @import '../../vars';
 
 .article {
+  flex-direction: row;
   max-width: 65rem;
+  margin: 1.5rem auto;
+  padding: 1.5rem 2rem;
   background-color: $LightCyanFilter;
   filter: drop-shadow(0 10px 8px rgba(46, 46, 46, 0.04))
     drop-shadow(0 4px 3px rgba(49, 49, 49, 0.1));
   border-radius: 0.3rem;
-  margin: 1.5rem auto;
-  padding: 1.5rem 2rem;
   display: flex;
-  align-items: center;
-  justify-self: center;
+  @include desk {
+    margin: 1.5rem 2rem;
+  }
+  @include mobile {
+    flex-direction: column;
+    max-width: 40rem;
+    margin: 1.5rem 2rem;
+    align-self: center;
+    padding: 2rem 2rem 1.5rem 0rem;
+    width: 75%;
+  }
+  &--logoDiv {
+    img {
+      max-width: 15rem;
+    }
+    @include desk {
+      margin: auto;
+      img {
+        max-width: 3.7rem;
+      }
+    }
+    @include mobile {
+      position: absolute;
+      top: -2rem;
+      left: 1.3rem;
+      img {
+        max-width: 3.7rem;
+      }
+    }
+  }
   &--infoDiv {
     margin-left: 1rem;
     flex: 1;
@@ -47,13 +76,19 @@
     }
     &__title {
       margin: 0.5rem;
+      @include mobile {
+        margin: 0.7rem 0.5rem;
+      }
       p {
+        font-size: 19px;
         color: #2a2a2a;
         cursor: pointer;
         display: inline-block;
-        font-size: 19px;
         margin: 0.3rem 0;
         font-weight: 700;
+        @include mobile {
+          font-size: 17px;
+        }
         &:hover {
           color: $desaturateDarkCyan;
         }
@@ -65,12 +100,26 @@
       gap: 1rem;
       color: $DarkCyan;
       font-size: 15px;
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      @include mobile {
+        font-size: 12px;
+        gap: 0.5rem;
+        border-bottom: 1px hsl(180, 9%, 78%) solid;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+      }
     }
   }
   &--tagsDiv {
     display: flex;
     align-items: center;
     gap: 1rem;
+    @include desk {
+      margin-left: 1.5rem;
+      flex-wrap: wrap;
+    }
   }
 }
 

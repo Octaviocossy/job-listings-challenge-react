@@ -12,13 +12,13 @@ $VeryDarkCyan: hsl(180, 14%, 20%);
 // Media query
 
 @mixin mobile {
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 1002px) {
     @content;
   }
 }
 
 @mixin desk {
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1160px) {
     @content;
   }
 }

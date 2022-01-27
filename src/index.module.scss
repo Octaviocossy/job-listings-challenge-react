@@ -16,7 +16,13 @@ code {
   font-family: 'Source Sans 3', sans-serif;
 }
 
-.main--header__img {
+.main--header__div {
   background-color: $desaturateDarkCyan;
+  background-size: cover;
+  background-image: url(./images/bg-header-desktop.svg);
   width: 100%;
+  height: 9.8rem;
+  @include mobile {
+    background-image: url(./images/bg-header-mobile.svg);
+  }
 }
