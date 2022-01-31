@@ -1,14 +1,9 @@
 export const getAllTags = (job) => {
-  const arr = [];
-  arr.push(job.role, job.level);
-  job.languages.map((tag) => arr.push(tag));
-  job.tools.map((tag) => arr.push(tag));
-  return arr;
+  return [job.level, job.role].concat(job.tools, job.languages);
 };
 
 export const sortJob = (tags, jobarr) => {
   return jobarr.filter((user) => {
-    const allTags = [user.level, user.role].concat(user.tools, user.languages);
-    return tags.every((tag) => allTags.includes(tag));
+    return tags.every((tag) => getAllTags(user).includes(tag));
   });
 };
