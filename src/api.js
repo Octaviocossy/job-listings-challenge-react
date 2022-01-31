@@ -1,5 +1,4 @@
 export const getJobList = async () => {
-  const url = 'http://localhost:4000/joblist';
-  const resp = await fetch(url);
+  const resp = await fetch(`${import.meta.env.VITE_API_URL}`);
   return await resp.json();
 };
