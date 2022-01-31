@@ -17,3 +17,32 @@
     color: $desaturateDarkCyan;
   }
 }
+.mainDiv {
+  display: flex;
+  .divInFilter {
+    @extend .div;
+    cursor: default;
+    &:hover {
+      background-color: $LightCyantags;
+      p {
+        color: $desaturateDarkCyan;
+      }
+    }
+  }
+  .button {
+    padding: 0;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    display: flex;
+    background-color: $desaturateDarkCyan;
+    padding: 0 0.5rem;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $VeryDarkCyan;
+    }
+    img {
+      align-self: center;
+    }
+  }
+}

@@ -26,7 +26,7 @@ const lib = {
   'The Air Filter Company': theairfliterLogo,
 };
 
-const Card = ({ job }) => {
+const Card = ({ job, tagCheck }) => {
   const [tags, setTags] = useState([]);
   const { company, contract, featured, location, position, postedAt } = job;
   useEffect(() => {
@@ -68,7 +68,7 @@ const Card = ({ job }) => {
       </div>
       <div className={styles['article--tagsDiv']}>
         {tags.map((tag) => (
-          <Tag key={tag} text={tag} />
+          <Tag key={tag} text={tag} tagCheck={tagCheck} tagInFilter={false} />
         ))}
       </div>
     </article>

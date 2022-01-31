@@ -1,0 +1,40 @@
+@import '../../vars';
+
+.div {
+  display: flex;
+  position: relative;
+  top: -2.4rem;
+  max-width: 65rem;
+  width: 100%;
+  margin: auto;
+  padding: 1.5rem 2rem;
+  background-color: $LightCyanFilter;
+  filter: drop-shadow(0 10px 8px rgba(46, 46, 46, 0.04))
+    drop-shadow(0 4px 3px rgba(49, 49, 49, 0.1));
+  border-radius: 0.3rem;
+  &--tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex: 1;
+  }
+  @include desk {
+    margin: auto 2rem;
+    width: auto;
+  }
+  @include mobile {
+    margin: auto;
+    max-width: 35rem;
+    width: 70%;
+  }
+  &--clearBtn {
+    border: none;
+    background-color: $LightCyanFilter;
+    font-size: 14px;
+    cursor: pointer;
+    &:hover {
+      color: $desaturateDarkCyan;
+      text-decoration: underline;
+    }
+  }
+}
